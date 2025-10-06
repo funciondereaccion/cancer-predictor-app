@@ -85,4 +85,56 @@ Necesitas tener **Git** y **Docker** instalados en tu sistema.
 # Nota: Asegúrate de enviar 30 features, como espera el modelo #
 ```
 ## 4. Capturas de Pantalla
-Se adjuntan 3 capturas de pantalla para orientar el curso de accion. La app corriendo, la dockerización y la prueba con get y post
+
+Se adjuntan 3 capturas de pantalla para orientar el curso de acción: la aplicación corriendo, la dockerización y la prueba con GET y POST.
+
+a) Aplicación corriendo (Estado GET)
+
+![Captura de la API Flask activa](https://github.com/funciondereaccion/cancer-predictor-app/blob/main/screenshots/app%20corriendo.png)
+
+b) Proceso de Dockerización
+
+![Captura de la construcción o ejecución de Docker](https://github.com/funciondereaccion/cancer-predictor-app/blob/main/screenshots/dockerizaci%C3%B3n.png)
+
+c)  Prueba de Predicción (GET y POST)
+
+![Captura de la prueba de la API con comandos GET y POST](https://github.com/funciondereaccion/cancer-predictor-app/blob/main/screenshots/get%20y%20post.png)
+```
+```
+## 5. Despliegue en la Nube ##
+El proyecto está preparado para su despliegue en la nube mediante contenedores (Docker).
+
+Estado Actual del Despliegue
+La aplicación está actualmente desplegada y activa en Render.
+
+Aplicación en Vivo: cancer-predictor-app-un27.onrender.com
+
+Panel de Control de Render: Dashboard de Despliegue
+
+Otras Opciones Recomendadas
+AWS: SageMaker + S3
+
+GCP: Vertex AI + Cloud Storage
+
+Azure: Azure ML + Azure Container Instances (ACI)
+
+## 6. Estructura del proyecto
+
+.
+├── .github
+
+│   └── workflows/ci.yml # Integración Continua (CI)
+
+├── src
+
+│   ├── app.py# Aplicación Flask (API)
+
+│   ├── train.py         # Script para entrenar y guardar el modelo
+
+│   └── model.joblib     # Modelo Random Forest serializado
+
+├── Dockerfile           # Instrucciones para construir la imagen Docker
+
+├── requirements.txt     # Dependencias de Python
+
+└── README.md            # Este archivo
